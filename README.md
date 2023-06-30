@@ -14,7 +14,7 @@ Este repositorio ha sido creado con el único objetivo de aprender de manera pr�
 ## Introducción
 Espero que este Repositorio te sirva para entender un poco más este difícil pero para mi gusto, interesantísimo ramo del dcc.
 ## Tareas 
-Esta es la principal sección de este repositorio, la cual está subdividida en 8 tareas. Cada tarea contiene: El enunciado de la tarea, los archivos para corroborar su solución y mi propia solución del problema. Cabe mencionar que las soluciones no son necesariamente las más óptimas, pero resuleven de manera correcta el ejercicio correspondiente.
+Esta es la principal sección de este repositorio, la cual está subdividida en 8 tareas. Cada tarea contiene: El enunciado de la tarea, los archivos para corroborar su solución y mi propia solución del problema. Cabe mencionar que las soluciones no son necesariamente las más óptimas, pero resuelven de manera correcta el ejercicio correspondiente.
 ## Tarea 1 Bits
 Programe la función ``comprimir`` con el siguiente encabezado:
 ```c
@@ -24,15 +24,16 @@ uint comprimir(uint *a, int nbits);
 Esta función comprime múltiples enteros sin signo almacenados en el arreglo ``a`` en un solo entero sin signo. Para ello se retorna la concatenación de todos los elementos en ``a`` truncados a ``nbits``. La cantidad de elementos almacenados en el arreglo ``a`` es el número de enteros de nbits que caben en un entero sin signo, es decir, el máximo numero ``k`` que cumple con ``k*nbits<=sizeof(uint)*8``, en donde ``sizeof()*8`` es el tamaño de un entero sin signo (no es 32 en algunas plataformas).
 Ejemplo de uso:
 ```c
-uint a[] = { 0b 100 110 101 011 000, 0b 000 101 101 011, 0b 100 001 010 000};
+uint a[] = { 0b 100 110 101 011 000, 0b 000 101 101 011, 0b 100 001 010 000 };
 uint r[] = comprimir(a,9);
 // r es 0b 101 011 000    101 101 011    001 010 000
 //         <---a[0]--->   <---a[1]--->   <---a[2]--->
 ```
-Restricciones:
--Usted no puede usar los operadores de multiplicación, división o módulo. Use los operadores de bits eficientemente.
--Si necesita calcular el número de bits en variables de tipo ``uint``, calcule ``sizeof(uint)<<3``. La cantidad de bits en un byte es siempre 8.
--El estándar de C no especifica el resultado para desplazamientos mayores o iguales al tamaño del operando. Sanitize rechaza el desplazamiento ``x<<nbits`` cuando ``nbits`` es 32 o superior. En esta tarea use ``x<<(nbits-1)<<1`` porque sí va a funcionar considerando las restricciones en el rango que puede tomar ``nbits`` en esta tarea.
+
+* Restricciones :
+  * Usted no puede usar los operadores de multiplicación, división o módulo. Use los operadores de bits eficientemente.
+  * Si necesita calcular el número de bits en variables de tipo ``uint``, calcule ``sizeof(uint)<<3``. La cantidad de bits en un byte es siempre 8.
+  * El estándar de C no especifica el resultado para desplazamientos mayores o iguales al tamaño del operando. Sanitize rechaza el desplazamiento ``x<<nbits`` cuando ``nbits`` es 32 o superior. En esta tarea use ``x<<(nbits-1)<<1`` porque sí va a funcionar considerando las restricciones en el rango que puede tomar ``nbits`` en esta tarea.
 
 ## Tarea 2 Strings
 Aqui la tarea 2
