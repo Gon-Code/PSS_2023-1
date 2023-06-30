@@ -34,7 +34,7 @@ Restricciones:
 -Si necesita calcular el número de bits en variables de tipo ``uint``, calcule ``sizeof(uint)<<3``. La cantidad de bits en un byte es siempre 8.
 -El estándar de C no especifica el resultado para desplazamientos mayores o iguales al tamaño del operando. Sanitize rechaza el desplazamiento ``x<<nbits`` cuando ``nbits`` es 32 o superior. En esta tarea use ``x<<(nbits-1)<<1`` porque sí va a funcionar considerando las restricciones en el rango que puede tomar ``nbits`` en esta tarea.
 
-## Tarea 2 Strings1
+## Tarea 2 Strings
 Aqui la tarea 2
 ## Tarea 3 Estructuras
 Aqui la tarea 3
