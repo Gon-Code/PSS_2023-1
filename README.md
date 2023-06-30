@@ -21,7 +21,7 @@ Programe la función ``comprimir`` con el siguiente encabezado:
 typedef unsigned int uint;
 uint comprimir(uint *a, int nbits);
 ```
-Esta función comprime múltiples enteros sin signo almacenados en el arreglo a en un solo entero sin signo. Para ello se retorna la concatenación de todos los elementos en ``a`` truncados a ``nbits``. La cantidad de elementos almacenados en el arreglo ``a`` es el número de enteros de nbits que caben en un entero sin signo, es decir, el máximo numero ``k`` que cumple con ``k*nbits<=sizeof(uint)*8``, en donde ``sizeof()*8`` es el tamaño de un entero sin signo (no es 32 en algunas plataformas).
+Esta función comprime múltiples enteros sin signo almacenados en el arreglo ``a`` en un solo entero sin signo. Para ello se retorna la concatenación de todos los elementos en ``a`` truncados a ``nbits``. La cantidad de elementos almacenados en el arreglo ``a`` es el número de enteros de nbits que caben en un entero sin signo, es decir, el máximo numero ``k`` que cumple con ``k*nbits<=sizeof(uint)*8``, en donde ``sizeof()*8`` es el tamaño de un entero sin signo (no es 32 en algunas plataformas).
 Ejemplo de uso:
 ````c
 uint a[] = { 0b 100 110 101 011 000, 0b 000 101 101 011, 0b 100 001 010 000};
