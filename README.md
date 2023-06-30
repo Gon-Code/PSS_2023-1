@@ -16,7 +16,7 @@ Espero que este Repositorio te sirva para entender un poco más este difícil pe
 ## Tareas 
 Esta es la principal sección de este repositorio, la cual está subdividida en 8 tareas. Cada tarea contiene: El enunciado de la tarea, los archivos para corroborar su solución y mi propia solución del problema. Cabe mencionar que las soluciones no son necesariamente las más óptimas, pero resuleven de manera correcta el ejercicio correspondiente.
 ## Tarea 1 Bits
-Programe la función ´´comprimir´´ con el siguiente encabezado:
+Programe la función ``comprimir`` con el siguiente encabezado:
 ```c
 typedef unsigned int uint;
 uint comprimir(uint *a, int nbits);
