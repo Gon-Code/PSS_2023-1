@@ -74,10 +74,8 @@ uint comprimir(uint a[], int nbits) {
     for(int i=nbits;i<=(sizeof(uint)<<3);i+=nbits){
         respuesta = respuesta << (nbits-1) << 1;
         respuesta |= a[j] & mascarafinal; 
-        j++;
-        
+        j++   
     }
     return respuesta;
-  
 }
 ```
