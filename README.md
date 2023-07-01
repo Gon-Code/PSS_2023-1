@@ -26,6 +26,8 @@ Esta es la principal sección de este repositorio, la cual está subdividida en 
   * make run debe felicitarlo por aprobar este modo de ejecución. Su Solución no debe ser 80% más lenta que la solución del profesor.
   * make run-g debe felicitarlo
   * make run-san debe felicitarlo y no reportar ningún problema como por ejemplo desplazamientos indefinidos.
+
+
 Lo anterior solo aplica desde la tarea 1 hasta la tarea 5.
 ## Tarea 1 Bits
 Puedes ver el enunciado en formato pdf [aquí](https://github.com/Gon-Code/PSS_2023-1/blob/main/img/Tarea_1_PSS.pdf).Los archivos con los casos de prueba y la plantilla con el encabezado de la función ``comprimir`` se encuentran en la carpeta [t1](https://github.com/Gon-Code/PSS_2023-1/blob/main/tareas/t1).
