@@ -9,14 +9,30 @@ Este repositorio ha sido creado con el único objetivo de aprender de manera pr�
   - [Tarea 3 : Estructuras](#tarea-3-estructuras)
   - [Tarea 4 : Archivos](#tarea-4-archivos)
   - [Tarea 5 : RISC-V ASSEMBLY](#tarea-5-assembly)
-
-
+- [Soluciones](#soluciones)
+  - [Tarea 1 : Bits](#solucion-tarea-1-bits)
+  - [Tarea 2 : Strings](#tarea-2-strings)
+  - [Tarea 3 : Estructuras](#tarea-3-estructuras)
+  - [Tarea 4 : Archivos](#tarea-4-archivos)
+  - [Tarea 5 : RISC-V ASSEMBLY](#tarea-5-assembly)
 ## Introducción
 Espero que este Repositorio te sirva para entender un poco más este difícil pero para mi gusto, interesantísimo ramo del dcc.
 ## Tareas 
+<<<<<<< Updated upstream
 Esta es la principal sección de este repositorio, la cual está subdividida en 8 tareas. Cada tarea contiene: El enunciado de la tarea, los archivos para corroborar su solución y mi propia solución del problema. Cabe mencionar que las soluciones no son necesariamente las más óptimas, pero resuleven de manera correcta el ejercicio correspondiente.
 ## Tarea 1 Bits
 Programe la función ´´comprimir´´ con el siguiente encabezado:
+=======
+Esta es la principal sección de este repositorio, la cual está subdividida en 8 tareas. Cada tarea contiene: El enunciado de la tarea, los archivos para corroborar su solución y mi propia solución del problema. Cabe mencionar que las soluciones no son necesariamente las más óptimas, pero resuelven de manera correcta el ejercicio correspondiente. Para corroborar que su solución es correcta debe hacer lo siguiente:
+* Requerimientos para aprobar su solución :
+  * make run debe felicitarlo por aprobar este modo de ejecución. Su Solución no debe ser 80% más lenta que la solución del profesor.
+  * make run-g debe felicitarlo
+  * make run-san debe felicitarlo y no reportar ningún problema como por ejemplo desplazamientos indefinidos
+Lo anterior solo aplica desde la tarea 1 hasta la tarea 5.
+## Tarea 1 Bits
+Puedes ver el enunciado en formato pdf [aquí](https://github.com/Gon-Code/PSS_2023-1/blob/main/img/Tarea_1_PSS.pdf).Los archivos con los casos de prueba y la plantilla con el encabezado de la función ``comprimir`` se encuentran en la carpeta [t1](https://github.com/Gon-Code/PSS_2023-1/blob/main/tareas/t1).
+Programe la función ``comprimir`` con el siguiente encabezado:
+>>>>>>> Stashed changes
 ```c
 typedef unsigned int uint;
 uint comprimir(uint *a, int nbits);
@@ -34,7 +50,11 @@ Restricciones:
   -Si necesita calcular el número de bits en variables de tipo ``uint``, calcule ``sizeof(uint)<<3``. La cantidad de bits en un byte es siempre 8.
   -El estándar de C no especifica el resultado para desplazamientos mayores o iguales al tamaño del operando. Sanitize rechaza el desplazamiento ``x<<nbits`` cuando ``nbits`` es 32 o superior. En esta tarea use ``x<<(nbits-1)<<1`` porque sí va a funcionar considerando las restricciones en el rango que puede tomar ``nbits`` en esta tarea.
 
+<<<<<<< Updated upstream
 ## Tarea 2 Strings1
+=======
+## Tarea 2 Strings
+>>>>>>> Stashed changes
 Aqui la tarea 2
 ## Tarea 3 Estructuras
 Aqui la tarea 3
@@ -42,3 +62,23 @@ Aqui la tarea 3
 Aqui la tarea 4
 ## Tarea 5 ASSEMBLY
 Aqui la tarea 5
+## Soluciones
+En esta sección se encuentran las soluciones de todas las tareas. 
+## Solucion Tarea 1 Bits
+```c
+uint comprimir(uint a[], int nbits) {
+    int j = 0;
+    uint respuesta = 0;
+    uint y = ~0;
+    uint mascara = y <<(nbits-1)<<1;
+    uint mascarafinal = ~(mascara);
+    for(int i=nbits;i<=(sizeof(uint)<<3);i+=nbits){
+        respuesta = respuesta << (nbits-1) << 1;
+        respuesta |= a[j] & mascarafinal; 
+        j++;
+        
+    }
+    return respuesta;
+  
+}
+```
