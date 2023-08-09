@@ -21,5 +21,5 @@ A continuación puedes ver los enunciados de las tareas en formato pdf. Más aba
 - [Tarea 5.1 : RISC-V ASSEMBLY](https://github.com/Gon-Code/PSS_2023-1/blob/main/tareas/t5/sort-c-rot13.c)
 - [Tarea 5.2 : RISC-V ASSEMBLY](https://github.com/Gon-Code/PSS_2023-1/blob/main/tareas/t5/sort-rv-rot13.s) 
 - [Tarea 6 : Circuitos](https://github.com/Gon-Code/PSS_2023-1/blob/main/tareas/t6)
-- [Tarea 7 : Directorios](https://github.com/Gon-Code/PSS_2023-1/blob/main/tareas/Tarea_7_PSS.pdf)
+- [Tarea 7 : Directorios](https://github.com/Gon-Code/PSS_2023-1/blob/main/img/Tarea_7_PSS.pdf)
 - [Tarea 8 : Paralelizacion con Fork](https://github.com/Gon-Code/PSS_2023-1/blob/main/tareas/t8/maleta.c)
